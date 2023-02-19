@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .field {
+            width: 180px;
+        }
+    </style>
+    <title>EditUser</title>
+</head>
+
+<body>
+    <h1>Edit Form</h1>
+    <form action="/edit" method="POST">
+        <input type="hidden" name="id" value="{{user.staff_id}}" />
+        <label>Name</label><br>
+        <input name="name" value="{{user.staff_name}}" class="field" /><br><br>
+
+        <label>Tecnology</label><br>
+        <input name="tecnology" value="{{user.staff_tecnology}}" class="field" /><br><br>
+
+        <label>Position</label><br>
+        <input name="position" value="{{user.staff_position}}" class="field" /><br><br>
+
+
+        <label>Emploed</label><br>
+        <input name="employed" type="date" value="{{user.staff_employed}}" class="field" /><br><br>
+
+        <input type="submit" value="Send" />
+    </form>
+    <a href="/">To UserList</a>
+</body>
+
+</html>

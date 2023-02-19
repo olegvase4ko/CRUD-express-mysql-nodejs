@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .field {
+            width: 180px;
+        }
+
+        .row {
+            background-color: #eee;
+        }
+    </style>
+    <title>EditUser</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="bg-secondary">
+    <nav class=" navbar navbar-light" style="background-color: #6c7c86; margin-bottom:20px;">
+        <div class="container d-flex justify-content-center">
+            <h2 class="display-5">Edit Form</h2>
+
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row justify-content-center" style="margin-bottom:30px;border-radius: 30px;">
+            <div class="col-6 text-center" style="margin-bottom:100px;">
+
+                <form action="/edit" method="POST">
+                    <div class="d-flex flex-row align-items-center mb-4 form-group" style="margin-top: 50px ;">
+                        <input type="hidden" name="id" value="{{user.staff_id}}" />
+                        <label for="name" style="margin-right:20px ;">Name</label>
+                        <input name="name" class="form-control field" id="name" value="{{user.staff_name}}"
+                            class="field" /><br><br>
+                    </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <label style="margin-right:20px ;">Tecnology</label><br>
+                        <input name="tecnology" class="form-control" value="{{user.staff_tecnology}}"
+                            class="field" /><br><br>
+                    </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <label style="margin-right:20px ;">Position</label><br>
+                        <input name="position" class="form-control" value="{{user.staff_position}}"
+                            class="field" /><br><br>
+                    </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <label style="margin-right:20px ;">Emploed</label><br>
+                        <input name="employed" class="form-control" type="date" value="{{user.staff_employed}}"
+                            class="field" /><br><br>
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Edit"
+                        style="padding-right:50px ;padding-left:50px;"> <br><br>
+                </form>
+                <a href="/">To UserList</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
